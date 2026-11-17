@@ -27,7 +27,7 @@ interface Perspective {
 
 const SEED_PERSPECTIVES: Perspective[] = [];
 
-const ROLE_COLORS/: Record<Perspective["role"], string> = {
+const ROLE_COLORS: Record<Perspective["role"], string> = {
   user: "var(--primary)",
   family: "var(--tension-low)",
   peer: "var(--tension-mid)",
