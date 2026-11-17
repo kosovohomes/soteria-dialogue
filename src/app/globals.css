@@ -196,11 +196,11 @@
 .hero-image {
   background-color: #e9ddcd;
   background-image: url('/images/hero-woman.webp');
-  background-position: 57% 44%;
+  background-position: 68% 44%;
   background-size: cover;
 }
 .hero-wash {
-  background: linear-gradient(90deg, rgba(248,241,232,.98) 0%, rgba(248,241,232,.9) 34%, rgba(248,241,232,.25) 62%, rgba(24,50,43,.1) 100%), linear-gradient(0deg, rgba(32,51,40,.16), transparent 28%);
+  background: linear-gradient(90deg, #f8f1e8 0%, rgba(248,241,232,.98) 25%, rgba(248,241,232,.88) 39%, rgba(248,241,232,.38) 54%, rgba(248,241,232,0) 70%), linear-gradient(0deg, rgba(32,51,40,.12), transparent 24%);
 }
 .hero-glass {
   background: linear-gradient(145deg, rgba(35,75,68,.76), rgba(27,46,42,.54));
@@ -240,8 +240,9 @@
   background-size: cover;
 }
 @media (max-width: 767px) {
-  .hero-image { background-position: 66% center; }
-  .hero-wash { background: linear-gradient(90deg, rgba(248,241,232,.97) 0%, rgba(248,241,232,.88) 48%, rgba(248,241,232,.55) 100%), linear-gradient(0deg, rgba(248,241,232,.3), transparent 40%); }
+  .hero-image { top: 0; bottom: auto; height: 330px; background-position: 67% 32%; }
+  .hero-wash { top: 0; bottom: auto; height: 330px; background: linear-gradient(180deg, rgba(248,241,232,.08) 0%, rgba(248,241,232,0) 64%, rgba(248,241,232,.28) 100%); }
+  .hero-content { min-height: 620px; padding-top: 260px; }
   .hero-glass { max-width: 300px; }
   .feature-item:nth-child(odd), .value-item:nth-child(odd) { border-left: 0; }
   .feature-item:nth-child(n+3), .value-item:nth-child(n+3) { border-top: 1px solid rgba(92,83,68,.18); padding-top: 1rem; }
