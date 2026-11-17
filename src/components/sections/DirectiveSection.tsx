@@ -38,7 +38,7 @@ export function DirectiveSection() {
   const [directive, setDirective] = useState<Directive>(DEFAULT_DIRECTIVE);
   const [saved, setSaved] = useState(false);
 
-  // Load from localStorage (in production: load from DB via /api/directive)
+  // Prototype only: this preference is stored in this browser, not on a server.
   useEffect(() => {
     const stored = localStorage.getItem("soteria-directive");
     if (stored) {
@@ -67,10 +67,10 @@ export function DirectiveSection() {
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-light text-foreground/90">Advance Directive</h2>
+        <p className="rounded-lg border border-border/50 bg-muted/20 p-4 text-xs leading-relaxed text-muted-foreground">Prototype notice: these settings are saved only in this browser. No emergency service, crisis line, contact, or facilitator is connected. This screen cannot control what emergency responders or other people may do. Do not rely on it in an emergency.</p>
         <p className="text-sm text-muted-foreground mt-1 max-w-lg leading-relaxed">
-          You decide what the platform is allowed to do. The platform is
-          architecturally incapable of acting outside what you authorize here.
-          No silent escalation. No duty-to-warn override.
+          This screen explores preferences for a future service. It does not authorize,
+          prevent, or control any real-world action or emergency response.
         </p>
       </div>
 
@@ -120,10 +120,10 @@ export function DirectiveSection() {
             Specific situations I authorize
           </div>
           {[
-            { key: "authorizeCrisisLine" as const, label: "Surface crisis line (988) resources", desc: "The platform may proactively show 988 resources." },
-            { key: "authorizeEmergencyServices" as const, label: "Contact emergency services (911)", desc: "The platform may call 911 on your behalf. Requires triple confirmation." },
-            { key: "authorizeNotificationOfNetwork" as const, label: "Notify my social network", desc: "The platform may contact family/friends you've listed." },
-            { key: "authorizePhysicalTransition" as const, label: "Recommend physical micro-house", desc: "The platform may suggest transition to a physical respite house." },
+            { key: "authorizeCrisisLine" as const, label: "Show local crisis support resources (future concept)", desc: "No crisis-line integration is connected." },
+            { key: "authorizeEmergencyServices" as const, label: "Emergency-service escalation (future concept)", desc: "No emergency-service integration is connected." },
+            { key: "authorizeNotificationOfNetwork" as const, label: "Notify my social network", desc: "No contact-notification integration is connected." },
+            { key: "authorizePhysicalTransition" as const, label: "Recommend physical micro-house", desc: "No physical respite service is connected." },
           ].map((item) => (
             <div key={item.key} className="flex items-start gap-3 py-2 px-3 rounded-lg hover:bg-muted/20">
               <button
@@ -175,7 +175,7 @@ export function DirectiveSection() {
         </button>
         {directiveCompleted && (
           <span className="text-xs text-muted-foreground">
-            ✓ Saved — the platform will respect these boundaries
+            ✓ Saved in this browser only
           </span>
         )}
         {saved && (
@@ -191,14 +191,12 @@ export function DirectiveSection() {
           What this means architecturally
         </div>
         <p className="text-sm text-foreground/80 leading-relaxed">
-          The platform&apos;s code is structured so that no intervention pathway
-          can execute without checking your directive first. There is no
-          override, no backdoor, no admin override. This is a design constraint,
-          not a policy that can be changed.
+          No intervention pathway is connected in this prototype. A future service
+          would need clear legal, clinical, and technical safeguards; this screen
+          does not provide an architectural guarantee.
         </p>
         <p className="text-xs text-muted-foreground/60 leading-relaxed">
-          If you uncheck everything, the platform becomes a companion that can
-          only be with you — it cannot act on your behalf. That is the default.
+          Your selections are a design exercise only and do not change any real service.
         </p>
       </div>
     </div>

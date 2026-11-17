@@ -28,8 +28,8 @@ export function ArrivalSection() {
           </h1>
           <p className="text-sm text-muted-foreground leading-relaxed">
             This is a space for being with — not fixing, not diagnosing, not
-            rushing. A peer companion can be here with you. Your social network
-            can join the dialogue. You stay in control.
+            rushing. This is an interactive prototype. It is not connected to peer companions,
+            clinicians, or a live social network service.
           </p>
         </div>
       </div>
@@ -59,22 +59,7 @@ export function ArrivalSection() {
             <span className="text-sm font-medium">Start a Trialogue</span>
           </div>
           <p className="text-xs text-muted-foreground leading-relaxed">
-            Bring your social network into the dialogue. Family, friends, a
-            facilitator pair. Multiple perspectives, no single authority.
-          </p>
-        </button>
-
-        <button
-          onClick={() => setSection("triage")}
-          className="rounded-xl border border-border/50 p-5 text-left hover:border-primary/40 hover:bg-primary/5 transition-all group"
-        >
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-lg opacity-60 group-hover:opacity-100 transition-opacity">◈</span>
-            <span className="text-sm font-medium">Triage</span>
-          </div>
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            Not a risk assessment. A prediction of who benefits from the least
-            coercive pathway. Based on 50 years of Soteria evidence.
+            Explore a sample dialogue workspace. Other participants are not connected yet.
           </p>
         </button>
 
@@ -101,7 +86,7 @@ export function ArrivalSection() {
           &ldquo;being with&rdquo; and dialogism.
         </p>
         <p className="text-[10px] text-muted-foreground/40">
-          43% drug-free responder rate · 0.38–0.61 SD effect size · 79% triage accuracy
+          Concept prototype · No clinical prediction or care service is provided
         </p>
       </div>
     </div>

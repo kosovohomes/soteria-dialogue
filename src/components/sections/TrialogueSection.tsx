@@ -25,36 +25,7 @@ interface Perspective {
   ts: number;
 }
 
-const SEED_PERSPECTIVES: Perspective[] = [
-  {
-    id: "p1",
-    participant: "You",
-    role: "user",
-    statement: "I've been hearing voices since Tuesday. They're not scary, just… loud.",
-    ts: Date.now() - 600000,
-  },
-  {
-    id: "p2",
-    participant: "Mom (Sarah)",
-    role: "family",
-    statement: "She's always been sensitive. I think it's stress from work.",
-    ts: Date.now() - 480000,
-  },
-  {
-    id: "p3",
-    participant: "Marcus (Peer Companion)",
-    role: "peer",
-    statement: "I hear that you're hearing something. That sounds intense. What do the voices say?",
-    ts: Date.now() - 360000,
-  },
-  {
-    id: "p4",
-    participant: "Dr. Rostova (Clinician)",
-    role: "clinician",
-    statement: "This could be consistent with several experiences. I don't want to label it yet. Let's stay with what you're experiencing.",
-    ts: Date.now() - 300000,
-  },
-];
+const SEED_PERSPECTIVES: Perspective[] = [];
 
 const ROLE_COLORS: Record<Perspective["role"], string> = {
   user: "var(--primary)",
@@ -96,20 +67,11 @@ export function TrialogueSection() {
         </p>
       </div>
 
-      {/* Participants */}
-      <div className="flex flex-wrap gap-2">
-        {[
-          { name: "You", role: "user" as const },
-          { name: "Mom (Sarah)", role: "family" as const },
-          { name: "Marcus", role: "peer" as const, subtitle: "Peer Companion" },
-          { name: "Dr. Rostova", role: "clinician" as const, subtitle: "Facilitator" },
-        ].map((p, i) => (
-          <div key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted/30">
-            <div className="size-2 rounded-full" style={{ backgroundColor: ROLE_COLORS[p.role] }} />
-            <span className="text-xs font-medium">{p.name}</span>
-            {p.subtitle && <span className="text-[10px] text-muted-foreground">{p.subtitle}</span>}
-          </div>
-        ))}
+      <div className="rounded-lg border border-border/50 bg-muted/20 p-4 text-xs leading-relaxed text-muted-foreground">
+        Prototype only: no other participants are connected and no facilitator or
+        clinical team is present. Entries are held only in this browser session;
+        they are not shared, securely stored, or sent to anyone. Do not enter
+        sensitive or identifying information.
       </div>
 
       {/* The polyphonic record — each perspective preserved separately */}
@@ -117,6 +79,9 @@ export function TrialogueSection() {
         <div className="text-xs text-muted-foreground uppercase tracking-wider">
           The record — multiple perspectives, not synthesized
         </div>
+        {perspectives.length === 0 && (
+          <p className="rounded-lg border border-dashed p-5 text-sm text-muted-foreground">No perspectives have been added yet.</p>
+        )}
         {perspectives.map((p) => (
           <div
             key={p.id}

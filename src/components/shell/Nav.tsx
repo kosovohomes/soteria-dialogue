@@ -8,7 +8,6 @@ const NAV: Array<{ id: Section; label: string; icon: string }> = [
   { id: "window", label: "Open Window", icon: "◡" },
   { id: "affect", label: "Affect-Logic", icon: "≈" },
   { id: "trialogue", label: "Trialogue", icon: "△" },
-  { id: "triage", label: "Triage", icon: "◈" },
   { id: "workbook", label: "Workbook", icon: "▣" },
   { id: "continuity", label: "Continuity", icon: "→" },
   { id: "directive", label: "Directive", icon: "◆" },
