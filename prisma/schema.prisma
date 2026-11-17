@@ -188,28 +188,6 @@ model TrialogueRecord {
   @@index([userId, startedAt])
 }
 
-// ─── Primitive 4: Bola & Mosher Triage Algorithm ───
-// Predicts probability of drug-free response (NOT risk assessment).
-// 79% accuracy (95% CI: 65-90%) per Bola & Mosher (2002).
-
-model TriageAssessment {
-  id            String   @id @default(cuid())
-  userId        String
-  // Gate 1: Age at onset
-  ageAtOnset    Int
-  // Gate 2: Goldstein Adolescent Social Competence Scale (15 items, 0-30)
-  goldsteinScore Int
-  // Gate 3: Symptom count (cardinal diagnostic symptoms)
-  symptomCount  Int
-  // Computed: probability of drug-free response (0-1)
-  responderProbability Float
-  // The recommendation (NOT a diagnosis — a care pathway suggestion)
-  recommendation String  // "digital_respite" | "social_network_mobilization" | "physical_micro_house"
-  createdAt     DateTime @default(now())
-
-  @@index([userId, createdAt])
-}
-
 // ─── Primitive 5: Continuity Coordinator ───
 // The same facilitator pair stays assigned across ALL touchpoints.
 // No hand-offs without explicit transfer ceremony.
