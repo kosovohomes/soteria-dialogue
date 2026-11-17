@@ -27,44 +27,7 @@ interface WorkbookEntry {
   ts: number;
 }
 
-const SEED_ENTRIES: WorkbookEntry[] = [
-  {
-    id: "w1",
-    type: "crisis_preference",
-    content: "When I'm overwhelmed, I need quiet and presence — not advice. Don't try to fix it. Just be there.",
-    authoredBy: "You",
-    authorRole: "user",
-    userEditable: true,
-    ts: Date.now() - 86400000,
-  },
-  {
-    id: "w2",
-    type: "goal",
-    content: "I want to get through the next two weeks without going to the ER. I want to try being heard first.",
-    authoredBy: "You",
-    authorRole: "user",
-    userEditable: true,
-    ts: Date.now() - 43200000,
-  },
-  {
-    id: "w3",
-    type: "feeling",
-    content: "The voices are less loud today. I slept 6 hours. That's better than last week.",
-    authoredBy: "You",
-    authorRole: "user",
-    userEditable: true,
-    ts: Date.now() - 3600000,
-  },
-  {
-    id: "w4",
-    type: "reflection",
-    content: "I noticed that when Marcus sat with me in silence, the tension dropped. No one has ever just been with me before.",
-    authoredBy: "You",
-    authorRole: "user",
-    userEditable: true,
-    ts: Date.now() - 1800000,
-  },
-];
+const SEED_ENTRIES: WorkbookEntry[] = [];
 
 const TYPE_LABELS: Record<WorkbookEntry["type"], string> = {
   feeling: "Feeling",
@@ -134,6 +97,10 @@ export function WorkbookSection() {
         </p>
       </div>
 
+      <div className="rounded-lg border border-border/50 bg-muted/20 p-4 text-xs leading-relaxed text-muted-foreground">
+        Prototype notice: workbook entries currently exist only in this open browser session. They are not saved to an account or secure database and may be lost when you leave or refresh. Do not enter sensitive or identifying information.
+      </div>
+
       {/* Add entry */}
       <div className="rounded-lg border border-dashed p-4 space-y-3">
         <div className="flex gap-1.5 flex-wrap">
@@ -169,6 +136,11 @@ export function WorkbookSection() {
 
       {/* Entries — user can edit any entry (final authority) */}
       <div className="space-y-3">
+        {entries.length === 0 && (
+          <p className="rounded-lg border border-dashed p-5 text-sm text-muted-foreground">
+            Your workbook is empty. Add a note above when you are ready.
+          </p>
+        )}
         {entries.map((entry) => (
           <div
             key={entry.id}
