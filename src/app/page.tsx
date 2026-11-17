@@ -6,25 +6,25 @@ const places = [
   {
     n: "01", title: "The Open Window", tag: "PRESENCE",
     copy: "Like opening a window in a home, this digital space offers room to pause, notice and arrive without pressure.",
-    image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85",
     href: "/experience"
   },
   {
     n: "02", title: "The Shared Table", tag: "MANY VOICES",
     copy: "Like gathering around a shared table, this digital space makes room for different perspectives without one voice owning the story.",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85",
     href: "/experience"
   },
   {
     n: "03", title: "The Personal Room", tag: "YOUR SPACE",
     copy: "Like a room of one’s own, this private digital space is for gathering thoughts, questions and reflections.",
-    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85",
     href: "/experience"
   },
   {
     n: "04", title: "The Connecting Path", tag: "CONNECTION",
     copy: "Like the passages that connect rooms in a home, this digital function helps carry context between moments and conversations.",
-    image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85",
     href: "/experience"
   }
 ];
@@ -53,9 +53,9 @@ export default function Home() {
       </header>
 
       <section className="relative flex min-h-[88svh] items-end overflow-hidden bg-[#283b35] px-6 pb-16 pt-36 text-white md:min-h-[94svh] md:px-16 md:pb-24">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=2200&q=90')] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#14251f]/80 via-[#1e3028]/40 to-[#17231e]/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#17231e]/70 via-transparent to-[#17231e]/25" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=90')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#18352b]/55 via-[#244535]/20 to-[#17231e]/0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#17231e]/45 via-transparent to-[#17231e]/10" />
         <div className="relative z-10 max-w-4xl">
           <p className="mb-7 text-[10px] uppercase tracking-[0.35em] text-[#e2d7c2]">A different way of being together</p>
           <h1 className="max-w-4xl text-5xl font-light leading-[1.05] tracking-[-0.04em] md:text-7xl lg:text-[5.8rem]">
@@ -113,7 +113,7 @@ export default function Home() {
 
       <section id="guide" className="grid gap-12 px-6 py-24 md:grid-cols-2 md:px-16 md:py-32">
         <div className="relative min-h-[420px] overflow-hidden bg-[#c5c3b7]">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=1400&q=85')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85')] bg-cover bg-center" />
           <div className="absolute inset-0 bg-[#263b32]/15" />
           <div className="absolute bottom-6 left-6 text-white"><p className="text-[9px] uppercase tracking-[0.28em]">A gentle introduction</p><p className="mt-2 font-serif text-3xl italic">Take your time.</p></div>
         </div>
@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       <section className="relative overflow-hidden px-6 py-28 text-center md:px-16 md:py-36">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2000&q=85')] bg-cover bg-center opacity-25" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85')] bg-cover bg-center opacity-35" />
         <div className="absolute inset-0 bg-[#f0eee8]/75" />
         <div className="relative mx-auto max-w-2xl">
           <p className="text-[10px] uppercase tracking-[0.28em] text-[#8b806c]">A place to begin</p>
