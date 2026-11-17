@@ -6,25 +6,25 @@ const places = [
   {
     n: "01", title: "The Open Window", tag: "PRESENCE",
     copy: "Like opening a window in a home, this digital space offers room to pause, notice and arrive without pressure.",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85",
+    image: "presence",
     href: "/experience"
   },
   {
     n: "02", title: "The Shared Table", tag: "MANY VOICES",
     copy: "Like gathering around a shared table, this digital space makes room for different perspectives without one voice owning the story.",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85",
+    image: "dialogue",
     href: "/experience"
   },
   {
     n: "03", title: "The Personal Room", tag: "YOUR SPACE",
     copy: "Like a room of one’s own, this private digital space is for gathering thoughts, questions and reflections.",
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85",
+    image: "personal",
     href: "/experience"
   },
   {
     n: "04", title: "The Connecting Path", tag: "CONNECTION",
     copy: "Like the passages that connect rooms in a home, this digital function helps carry context between moments and conversations.",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85",
+    image: "continuity",
     href: "/experience"
   }
 ];
@@ -52,25 +52,32 @@ export default function Home() {
         <Link href="/experience" className="rounded-full border border-white/60 px-5 py-2.5 text-xs transition hover:bg-white hover:text-[#26332f]">Enter the experience ↗</Link>
       </header>
 
-      <section className="relative flex min-h-[88svh] items-end overflow-hidden bg-[#283b35] px-6 pb-16 pt-36 text-white md:min-h-[94svh] md:px-16 md:pb-24">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2200&q=90')] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#18352b]/55 via-[#244535]/20 to-[#17231e]/0" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#17231e]/45 via-transparent to-[#17231e]/10" />
+      <section className="relative flex min-h-[88svh] items-end overflow-hidden bg-[#d8e0d7] px-6 pb-16 pt-36 text-white md:min-h-[94svh] md:px-16 md:pb-24">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2200&q=90')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#17372e]/80 via-[#244b3d]/55 to-[#244b3d]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#17372e]/55 via-transparent to-[#17372e]/10" />
+        <div className="absolute right-[7%] top-[20%] hidden w-[34%] max-w-[440px] rounded-2xl border border-white/60 bg-[#f7f6f0]/95 p-4 text-[#31443b] shadow-2xl backdrop-blur md:block">
+          <div className="flex items-center justify-between border-b border-[#d8ddd5] pb-3"><span className="text-[9px] uppercase tracking-[0.22em]">Soteria · Your digital space</span><span className="size-2 rounded-full bg-[#8da98d]"/></div>
+          <div className="grid grid-cols-[74px_1fr] gap-3 pt-4">
+            <div className="space-y-2"><div className="h-7 rounded-lg bg-[#dfe8df]"/><div className="h-7 rounded-lg bg-[#e9e7dc]"/><div className="h-7 rounded-lg bg-[#e9e7dc]"/></div>
+            <div><p className="text-[10px] text-[#8b927f]">A space to arrive</p><p className="mt-1 text-lg font-light">Welcome. Take your time.</p><div className="mt-3 flex gap-2"><div className="h-14 flex-1 rounded-lg bg-[#e3ebe2]"/><div className="h-14 flex-1 rounded-lg bg-[#eee9df]"/></div><div className="mt-3 h-2 w-3/4 rounded bg-[#dce2d9]"/></div>
+          </div>
+          <div className="mt-4 flex items-center justify-between border-t border-[#d8ddd5] pt-3 text-[8px] tracking-wide text-[#77857a]"><span>PRESENCE · DIALOGUE · CHOICE</span><span>01 / 04</span></div>
+        </div>
         <div className="relative z-10 max-w-4xl">
-          <p className="mb-7 text-[10px] uppercase tracking-[0.35em] text-[#e2d7c2]">A different way of being together</p>
+          <p className="mb-7 text-[10px] uppercase tracking-[0.35em] text-[#e2d7c2]">A digital place for being together</p>
           <h1 className="max-w-4xl text-5xl font-light leading-[1.05] tracking-[-0.04em] md:text-7xl lg:text-[5.8rem]">
             Not here to fix you.<br /><span className="font-serif italic text-[#e4d8c1]">Here to be with you.</span>
           </h1>
           <div className="mt-9 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <p className="max-w-md text-sm leading-7 text-white/75 md:text-base">
-              Soteria Dialogue is a digital environment organised like a home: not a building to visit, but a thoughtful structure of spaces for presence, reflection, dialogue and connection.
+            <p className="max-w-md text-sm leading-7 text-white/85 md:text-base">
+              A human-centred digital platform, organised like a home: connected spaces for presence, reflection, dialogue and continuity.
             </p>
             <a href="#concept" className="inline-flex w-fit items-center gap-4 border-b border-white/50 pb-2 text-xs tracking-wide">Discover the idea <span className="text-lg">↓</span></a>
           </div>
         </div>
-        <div className="absolute bottom-8 right-8 hidden text-[9px] uppercase tracking-[0.28em] text-white/50 md:block">Presence · Dialogue · Choice</div>
+        <div className="absolute bottom-8 right-8 hidden text-[9px] uppercase tracking-[0.28em] text-white/70 md:block">A connected digital environment</div>
       </section>
-
       <section id="concept" className="grid gap-12 px-6 py-24 md:grid-cols-[0.8fr_1.2fr] md:px-16 md:py-32">
         <div>
           <p className="text-[10px] uppercase tracking-[0.28em] text-[#8b806c]">01 / The idea</p>
@@ -100,11 +107,13 @@ export default function Home() {
         <p className="mb-8 max-w-2xl text-xs leading-6 text-[#68736d]">When we say “house”, we mean a digital architecture: a way to organise experiences so that each has a purpose, while the person remains free to move, pause or leave. No physical building is being described.</p>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {places.map((place) => <Link href={place.href} key={place.n} className="group block">
-            <div className="relative mb-5 aspect-[4/5] overflow-hidden bg-[#c8c5bb]">
-              <div className="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-105" style={{backgroundImage:`url("${place.image}")`}} />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/5" />
-              <span className="absolute left-5 top-5 text-xs text-white/80">{place.n}</span>
-              <span className="absolute bottom-5 left-5 text-[9px] uppercase tracking-[0.24em] text-white/80">{place.tag}</span>
+            <div className="relative mb-5 flex aspect-[4/5] flex-col overflow-hidden border border-[#d0d3c9] bg-gradient-to-br from-[#f8f7f1] via-[#e9eee7] to-[#d7e2d8] p-4 text-[#34483f] shadow-sm transition duration-700 group-hover:-translate-y-1">
+              <div className="flex items-center justify-between border-b border-[#bfcbbf] pb-3"><span className="text-[8px] uppercase tracking-[0.2em]">Soteria / {place.tag}</span><span className="size-2 rounded-full bg-[#8ca78d]"/></div>
+              {place.image === "presence" && <><div className="mt-5 text-[9px] text-[#829087]">A MOMENT TO ARRIVE</div><div className="mt-2 text-2xl font-light">Welcome.</div><div className="my-5 grid flex-1 place-items-center"><div className="grid size-28 place-items-center rounded-full border border-[#a9bba9] bg-white/50"><div className="grid size-20 place-items-center rounded-full border border-[#b9c9b8] bg-[#e5eee4]"><span className="text-[9px] tracking-widest">PAUSE</span></div></div></div><div className="rounded-lg bg-white/75 p-3 text-[9px]">You can begin wherever you are.</div></>}
+              {place.image === "dialogue" && <><div className="mt-5 text-[9px] text-[#829087]">A SHARED CONVERSATION</div><div className="mt-2 text-xl font-light">Many voices.</div><div className="mt-5 flex-1 space-y-3"><div className="w-[82%] rounded-xl rounded-tl-sm bg-white p-3 text-[9px] shadow-sm">I see it a little differently…</div><div className="ml-auto w-[82%] rounded-xl rounded-tr-sm bg-[#d4e2d3] p-3 text-[9px]">There is room for both views.</div><div className="w-[70%] rounded-xl rounded-tl-sm bg-white p-3 text-[9px] shadow-sm">Tell me more.</div></div><div className="rounded-full border border-[#bdc9bd] bg-white/70 px-3 py-2 text-[8px] text-[#879187]">Write a thought…</div></>}
+              {place.image === "personal" && <><div className="mt-5 text-[9px] text-[#829087]">YOUR PRIVATE SPACE</div><div className="mt-2 text-xl font-light">A page of your own.</div><div className="mt-5 flex-1 rounded-xl border border-[#d4d9ce] bg-white/75 p-4 shadow-sm"><div className="mb-4 h-2 w-1/3 rounded bg-[#d7e1d6]"/><div className="space-y-2"><div className="h-1.5 w-full rounded bg-[#e6e8df]"/><div className="h-1.5 w-5/6 rounded bg-[#e6e8df]"/><div className="h-1.5 w-4/6 rounded bg-[#e6e8df]"/></div><div className="mt-8 h-16 rounded-lg bg-[#f0eee5]"/></div><div className="mt-3 text-[8px]">Reflect · Save · Return</div></>}
+              {place.image === "continuity" && <><div className="mt-5 text-[9px] text-[#829087]">CONNECTED EXPERIENCES</div><div className="mt-2 text-xl font-light">A path between moments.</div><div className="relative mt-5 flex flex-1 items-center justify-center"><div className="absolute h-[1px] w-[75%] bg-[#9eb49f]"/><div className="flex w-full items-center justify-between"><div className="grid size-12 place-items-center rounded-xl border border-[#b9c9b8] bg-white text-[8px] shadow-sm">ARRIVE</div><div className="grid size-12 place-items-center rounded-xl border border-[#b9c9b8] bg-white text-[8px] shadow-sm">DIALOGUE</div><div className="grid size-12 place-items-center rounded-xl border border-[#b9c9b8] bg-white text-[8px] shadow-sm">RETURN</div></div></div><div className="rounded-lg bg-white/75 p-3 text-[9px]">Your journey, at your pace.</div></>}
+              <div className="mt-4 flex items-center justify-between border-t border-[#bfcbbf] pt-3 text-[8px] tracking-widest text-[#718176]"><span>{place.tag}</span><span>{place.n} / 04</span></div>
             </div>
             <div className="flex items-start justify-between gap-3"><div><h3 className="text-xl font-light">{place.title}</h3><p className="mt-2 text-xs leading-6 text-[#68736d]">{place.copy}</p></div><span className="mt-1 text-lg transition-transform group-hover:translate-x-1">↗</span></div>
           </Link>)}
@@ -112,10 +121,14 @@ export default function Home() {
       </section>
 
       <section id="guide" className="grid gap-12 px-6 py-24 md:grid-cols-2 md:px-16 md:py-32">
-        <div className="relative min-h-[420px] overflow-hidden bg-[#c5c3b7]">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85')] bg-cover bg-center" />
-          <div className="absolute inset-0 bg-[#263b32]/15" />
-          <div className="absolute bottom-6 left-6 text-white"><p className="text-[9px] uppercase tracking-[0.28em]">A gentle introduction</p><p className="mt-2 font-serif text-3xl italic">Take your time.</p></div>
+        <div className="relative flex min-h-[420px] items-center justify-center overflow-hidden bg-gradient-to-br from-[#dce7dc] via-[#edf0e8] to-[#d4e0dc] p-6">
+          <div className="w-full max-w-lg rounded-2xl border border-white bg-[#fafaf6]/95 p-5 text-[#34483f] shadow-xl">
+            <div className="flex items-center justify-between border-b border-[#d9ded5] pb-3"><span className="text-[9px] uppercase tracking-[0.2em]">Soteria Dialogue · Guided tour</span><span className="size-2 rounded-full bg-[#8ca78d]"/></div>
+            <p className="mt-5 text-2xl font-light">Explore the digital house.</p><p className="mt-1 text-[10px] text-[#879187]">A connected platform. Spaces with different purposes.</p>
+            <div className="mt-5 grid grid-cols-2 gap-3"><div className="rounded-xl bg-[#e7eee5] p-4"><div className="mb-5 size-8 rounded-full border border-[#a9bba9]"/><p className="text-xs">Presence</p><p className="mt-1 text-[9px] text-[#879187]">Arrive and pause</p></div><div className="rounded-xl bg-[#f0ece1] p-4"><div className="mb-5 flex gap-1"><span className="h-3 w-8 rounded-full bg-white"/><span className="h-3 w-8 rounded-full bg-[#d4dfd3]"/></div><p className="text-xs">Dialogue</p><p className="mt-1 text-[9px] text-[#879187]">Meet perspectives</p></div><div className="rounded-xl bg-[#f0ece1] p-4"><div className="mb-5 h-7 w-9 rounded border border-[#c8cbbb] bg-white"/><p className="text-xs">Personal room</p><p className="mt-1 text-[9px] text-[#879187]">Reflect privately</p></div><div className="rounded-xl bg-[#e7eee5] p-4"><div className="mb-5 flex items-center gap-1"><span className="size-3 rounded-full bg-[#9bb39b]"/><span className="h-px w-5 bg-[#9bb39b]"/><span className="size-3 rounded-full bg-[#9bb39b]"/></div><p className="text-xs">Continuity</p><p className="mt-1 text-[9px] text-[#879187]">Carry context forward</p></div></div>
+            <div className="mt-5 flex items-center justify-between border-t border-[#d9ded5] pt-3 text-[8px] tracking-wide text-[#879187]"><span>YOUR SPACE · YOUR CHOICE</span><span>01 — 04</span></div>
+          </div>
+          <div className="absolute bottom-5 left-8 text-[9px] uppercase tracking-[0.25em] text-[#687b6e]">A platform designed around people</div>
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-[10px] uppercase tracking-[0.28em] text-[#8b806c]">03 / A guided tour</p>
