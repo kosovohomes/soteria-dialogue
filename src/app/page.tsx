@@ -6,7 +6,6 @@ import { ArrivalSection } from "@/components/sections/ArrivalSection";
 import { OpenWindowSection } from "@/components/sections/OpenWindowSection";
 import { AffectLogicSection } from "@/components/sections/AffectLogicSection";
 import { TrialogueSection } from "@/components/sections/TrialogueSection";
-import { TriageSection } from "@/components/sections/TriageSection";
 import { ContinuitySection } from "@/components/sections/ContinuitySection";
 import { DirectiveSection } from "@/components/sections/DirectiveSection";
 import { WorkbookSection } from "@/components/sections/WorkbookSection";
@@ -53,12 +52,14 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Nav />
+      <div className="border-b border-border/30 bg-muted/20 px-4 py-2 text-center text-[11px] leading-relaxed text-muted-foreground">
+        Prototype only · No live companions, clinical team, emergency response, or secure account storage is connected. Do not enter sensitive information.
+      </div>
       <main className="flex-1 container max-w-3xl mx-auto p-6 sm:p-8 lg:p-12 soft-fade" key={section}>
         {section === "arrival" && <ArrivalSection />}
         {section === "window" && <OpenWindowSection />}
         {section === "affect" && <AffectLogicSection />}
         {section === "trialogue" && <TrialogueSection />}
-        {section === "triage" && <TriageSection />}
         {section === "continuity" && <ContinuitySection />}
         {section === "directive" && <DirectiveSection />}
         {section === "workbook" && <WorkbookSection />}
