@@ -9,7 +9,7 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: "Soteria Dialogue — Being With",
-  description: "A digital-first crisis platform built on 50 years of Soteria and Open Dialogue evidence. Non-coercive. Peer-accompanied. Network-inclusive.",
+  description: "Soteria Dialogue explores a human-centred approach to presence, dialogue, autonomy and continuity. Discover the concept and its interactive prototype.",
 };
 
 export default function RootLayout({
