@@ -18,7 +18,7 @@ const places = [
   {
     n: "03", title: "The Workbook", tag: "YOUR SPACE",
     copy: "A personal place to gather thoughts, questions and things worth carrying forward.",
-    image: "https://images.unsplash.com/photo-1455390582262-044c`ead277a`?auto=format&fit=crop&w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=85",
     href: "/experience"
   },
   {
@@ -47,7 +47,7 @@ export default function Home() {
         <nav className="hidden items-center gap-8 text-xs tracking-wide md:flex">
           <a href="#concept" className="text-white/80 transition hover:text-white">The concept</a>
           <a href="#houses" className="text-white/80 transition hover:text-white">Explore the houses</a>
-          <a href="#guide" className="text-white/80 transition hover:text-white">How it works</a>
+          <a href="/tutorial" className="text-white/80 transition hover:text-white">The tutorial</a>
         </nav>
         <Link href="/experience" className="rounded-full border border-white/60 px-5 py-2.5 text-xs transition hover:bg-white hover:text-[#26332f]">Enter the experience ↗</Link>
       </header>
@@ -117,7 +117,7 @@ export default function Home() {
           <div className="mt-9 space-y-4 border-t border-[#c9c5ba] pt-6">
             {["Begin with the person", "Explore the houses", "Discover dialogue and continuity"].map((v,i)=><div className="flex items-center gap-4" key={v}><span className="grid size-8 place-items-center rounded-full border border-[#bcb6a8] text-[10px]">0{i+1}</span><span className="text-sm">{v}</span></div>)}
           </div>
-          <Link href="/experience" className="mt-9 inline-flex w-fit items-center gap-5 rounded-full bg-[#34483f] px-7 py-4 text-xs text-white transition hover:bg-[#26372f]">Start the guided exploration <span>↗</span></Link>
+          <Link href="/tutorial" className="mt-9 inline-flex w-fit items-center gap-5 rounded-full bg-[#34483f] px-7 py-4 text-xs text-white transition hover:bg-[#26372f]">Start the guided exploration <span>↗</span></Link>
         </div>
       </section>
 
