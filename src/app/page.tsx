@@ -5,25 +5,25 @@ import Link from "next/link";
 const places = [
   {
     n: "01", title: "The Open Window", tag: "PRESENCE",
-    copy: "A quieter kind of space. Room to pause, breathe and arrive without pressure.",
+    copy: "Like opening a window in a home, this digital space offers room to pause, notice and arrive without pressure.",
     image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1200&q=85",
     href: "/experience"
   },
   {
-    n: "02", title: "The Dialogue House", tag: "MANY VOICES",
-    copy: "A place for different perspectives to meet, without one voice owning the story.",
+    n: "02", title: "The Shared Table", tag: "MANY VOICES",
+    copy: "Like gathering around a shared table, this digital space makes room for different perspectives without one voice owning the story.",
     image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85",
     href: "/experience"
   },
   {
-    n: "03", title: "The Workbook", tag: "YOUR SPACE",
-    copy: "A personal place to gather thoughts, questions and things worth carrying forward.",
+    n: "03", title: "The Personal Room", tag: "YOUR SPACE",
+    copy: "Like a room of one’s own, this private digital space is for gathering thoughts, questions and reflections.",
     image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=85",
     href: "/experience"
   },
   {
-    n: "04", title: "The Continuity House", tag: "CONNECTION",
-    copy: "An idea for keeping the thread between conversations, people and moments.",
+    n: "04", title: "The Connecting Path", tag: "CONNECTION",
+    copy: "Like the passages that connect rooms in a home, this digital function helps carry context between moments and conversations.",
     image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85",
     href: "/experience"
   }
@@ -63,7 +63,7 @@ export default function Home() {
           </h1>
           <div className="mt-9 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <p className="max-w-md text-sm leading-7 text-white/75 md:text-base">
-              Soteria Dialogue is a human-centred concept for making space for presence, conversation and shared understanding.
+              Soteria Dialogue is a digital environment organised like a home: not a building to visit, but a thoughtful structure of spaces for presence, reflection, dialogue and connection.
             </p>
             <a href="#concept" className="inline-flex w-fit items-center gap-4 border-b border-white/50 pb-2 text-xs tracking-wide">Discover the idea <span className="text-lg">↓</span></a>
           </div>
@@ -74,11 +74,11 @@ export default function Home() {
       <section id="concept" className="grid gap-12 px-6 py-24 md:grid-cols-[0.8fr_1.2fr] md:px-16 md:py-32">
         <div>
           <p className="text-[10px] uppercase tracking-[0.28em] text-[#8b806c]">01 / The idea</p>
-          <h2 className="mt-6 max-w-sm text-4xl font-light leading-tight tracking-tight md:text-5xl">A space around the person, <span className="font-serif italic text-[#8b806c]">not the system.</span></h2>
+          <h2 className="mt-6 max-w-sm text-4xl font-light leading-tight tracking-tight md:text-5xl">A digital home built around the person, <span className="font-serif italic text-[#8b806c]">not the system.</span></h2>
         </div>
         <div className="flex flex-col justify-end gap-8">
           <p className="max-w-2xl text-xl font-light leading-relaxed text-[#52615a] md:text-2xl">
-            What if support began with listening? What if a person could bring their own people, meanings and questions into the room?
+            The house is our guiding analogy. Its foundation is a set of values; its rooms are digital spaces with different purposes; its doors leave people free to choose where to go.
           </p>
           <div className="grid grid-cols-2 gap-6 border-t border-[#c9c5ba] pt-6 md:grid-cols-4">
             {["Presence", "Dialogue", "Autonomy", "Continuity"].map((item, i) => <div key={item}><span className="text-[10px] text-[#a69a84]">0{i+1}</span><p className="mt-2 text-sm">{item}</p></div>)}
@@ -88,9 +88,16 @@ export default function Home() {
 
       <section id="houses" className="bg-[#e5e2d9] px-6 py-24 md:px-16 md:py-28">
         <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-          <div><p className="text-[10px] uppercase tracking-[0.28em] text-[#8b806c]">02 / Explore the world</p><h2 className="mt-5 text-4xl font-light tracking-tight md:text-5xl">A house for every kind<br />of <span className="font-serif italic text-[#8b806c]">conversation.</span></h2></div>
-          <p className="max-w-xs text-sm leading-6 text-[#68736d]">Explore the spaces and ideas that shape the Soteria Dialogue concept.</p>
+          <div><p className="text-[10px] uppercase tracking-[0.28em] text-[#8b806c]">02 / Understand the digital house</p><h2 className="mt-5 text-4xl font-light tracking-tight md:text-5xl">One digital home.<br />Different spaces for <span className="font-serif italic text-[#8b806c]">being with.</span></h2></div>
+          <p className="max-w-xs text-sm leading-6 text-[#68736d]">The house is a metaphor for how the platform is organised. These are digital functions and experiences—not physical houses or locations.</p>
         </div>
+        <div className="mb-10 grid gap-5 border-y border-[#c9c5ba] py-6 md:grid-cols-4">
+          <div><p className="text-[9px] uppercase tracking-[0.22em] text-[#8b806c]">The foundation</p><p className="mt-2 text-sm">Principles and values</p></div>
+          <div><p className="text-[9px] uppercase tracking-[0.22em] text-[#8b806c]">The entrance</p><p className="mt-2 text-sm">Arrival, orientation and choice</p></div>
+          <div><p className="text-[9px] uppercase tracking-[0.22em] text-[#8b806c]">The rooms</p><p className="mt-2 text-sm">Digital spaces with distinct purposes</p></div>
+          <div><p className="text-[9px] uppercase tracking-[0.22em] text-[#8b806c]">The pathways</p><p className="mt-2 text-sm">Continuity between experiences</p></div>
+        </div>
+        <p className="mb-8 max-w-2xl text-xs leading-6 text-[#68736d]">When we say “house”, we mean a digital architecture: a way to organise experiences so that each has a purpose, while the person remains free to move, pause or leave. No physical building is being described.</p>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {places.map((place) => <Link href={place.href} key={place.n} className="group block">
             <div className="relative mb-5 aspect-[4/5] overflow-hidden bg-[#c8c5bb]">
@@ -113,7 +120,7 @@ export default function Home() {
         <div className="flex flex-col justify-center">
           <p className="text-[10px] uppercase tracking-[0.28em] text-[#8b806c]">03 / A guided tour</p>
           <h2 className="mt-6 text-4xl font-light leading-tight md:text-5xl">See how the pieces <span className="font-serif italic text-[#8b806c]">fit together.</span></h2>
-          <p className="mt-6 max-w-md text-sm leading-7 text-[#68736d]">A short, visual introduction to the spaces, the language and the choices behind the platform. No long manual. Explore at your own pace.</p>
+          <p className="mt-6 max-w-md text-sm leading-7 text-[#68736d]">A short visual guide to the house analogy: how its foundation, entrance, rooms and connecting paths translate into digital functions. No long manual. Explore at your own pace.</p>
           <div className="mt-9 space-y-4 border-t border-[#c9c5ba] pt-6">
             {["Begin with the person", "Explore the houses", "Discover dialogue and continuity"].map((v,i)=><div className="flex items-center gap-4" key={v}><span className="grid size-8 place-items-center rounded-full border border-[#bcb6a8] text-[10px]">0{i+1}</span><span className="text-sm">{v}</span></div>)}
           </div>
